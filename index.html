@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./css/bootstrap.css">
+   <link rel="stylesheet" href="css/main.css">
+    <title>Pakemon</title>
+</head>
+
+<body class="bg-light">
+
+    <main class="pakemon container">
+
+        <h1 class="pakemon__heading text-primary text-center text-uppercase  mt-5 fs-1">pakemon</h1>
+
+        <p class="pakemon__count ms-3 fs-3 text-danger">Count: <span class="count"></span></p>
+
+        <div class="pakemon__box container-sm d-sm-flex justify-content-between mt-3 ">
+
+            <form class="pakemon__box-form col-4 col-sm-5 col-12 col-md-3 d-flex flex-column">
+
+                <input type="text" class="pakemon__box-form-input bg-info form-control col-10 border-0 py-2" placeholder="name">
+
+                <input type="text" id="height" class="pakemon__box-form-input bg-info form-control col-10 border-0 mt-4 py-2" placeholder="height">
+
+                <input type="text" id="weight" class="pakemon__box-form-input bg-info form-control col-10 border-0 mt-4 py-2" placeholder="weight">
+
+                <select class="form-select mt-4 border-0 bg-info" id="pakemon__select" aria-label="Floating label select example">
+                    <option selected value = "all">All</option>
+                </select>
+
+                <select class="form-select mt-4 border-0 bg-info" id="pakemon__sort" aria-label="Floating label select example">
+                    <option selected value="height__low-high">height (low to high)</option>
+                    <option value="height__high-low">height (high to low)</option>
+                    <option value="weight__low-high">weight (low to high)</option>
+                    <option value="weight__high-low">weight (high to low)</option>
+                </select>
+
+                <button type="submit" class="btn btn-success mt-4">Search</button>
+
+                <ul class="bookmark__list">
+                    <!-- <div class="bookmark-box border border-secondary border-2 text ps-3 pb-2 pt-3 mt-3">
+                    <h3 class="bookmark-box__title m-0 p-0">bookmark title</h3>
+
+                    <button class="bookmark-box__removebtn btn btn-danger mt-1" type="submit">Remove</button>
+                </div> -->
+                </ul>
+            </form>
+
+
+            <div class="pakemon__box-list col-md-8  list-unstyled col-sm-6 col-12 d-xl-flex justify-content-around flex-wrap">
+
+                <!-- <div class="pakemon__box-list-item border border-white bg-white d-flex flex-column align-items-center col-xl-5" >
+
+                    <img class="pakemon__box-item-img " src="http://www.serebii.net/pokemongo/pokemon/001.png" alt="pokemon" width="120" height="138">
+
+                    <p class="pakemon__box-item-heading text-center fw-bold fs-3">Venusaur</p>
+
+                    <p class="pakemon__box-item-type text-center fw-bold mb-0">Type: <span class="type">Grass Poison</span></p>
+
+                    <p class="pakemon__box-item-height text-center fw-bold mb-0">Height: <span class="height"></span></p>
+
+                    <p class="pakemon__box-item-weight text-center fw-bold">Weight: <span class="weight"></span></p>
+                </div> -->
+
+            </div>
+        </div>
+    </main>
+
+    <template class="pakemon__template">
+        
+        <div class="pakemon__box-list-item border border-white bg-info d-flex flex-column align-items-center col-xl-5" >
+
+            <img class="pakemon__box-item-img " src="http://www.serebii.net/pokemongo/pokemon/001.png" alt="pokemon" width="120" height="138">
+
+            <p class="pakemon__box-item-heading text-center fw-bold fs-3">Venusaur</p>
+
+            <p class="pakemon__box-item-type text-center fw-bold mb-0">Type: <span class="type">Grass Poison</span></p>
+
+            <p class="pakemon__box-item-height text-center fw-bold mb-0">Height: <span class="height"></span></p>
+
+            <p class="pakemon__box-item-weight text-center fw-bold">Weight: <span class="weight"></span></p>
+
+            <button class="pakemon__box-item-bookmark btn btn-danger mt-0 mb-3" type="submit">Bookmark</button>
+        </div>
+
+        <ul class="list-btn d-flex justify-content-center mt-4" style="width: 100%;">
+            <li class="btn fs-4 m-0 py-1 px-3 border border-1">1</li>
+        </ul>
+
+    </template>
+
+
+    <template class="bookmark__template">
+
+        <div class="bookmark-box border border-secondary border-2 text ps-3 pb-2 pt-3 mt-3">
+            <h3 class="bookmark-box__title m-0 p-0">bookmark title</h3>
+
+            <button class="bookmark-box__removebtn btn btn-danger mt-1" type="submit">Remove</button>
+        </div>
+
+    </template>
+
+    <template class="template__btn">
+        <li class="btn fs-4 m-0 py-1 px-3 border border-1">1</li>
+    </template>
+
+
+
+
+    <script src="./js/pokemon.js"></script>
+    <script src="./js/movies.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.js"></script>
+</body>
+
+</html>
